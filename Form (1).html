@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <meta charset="utf-8">
+</head>
+<style>
+    form{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 15px;
+        letter-spacing: 2px;
+        padding-top: 10px;
+
+    }
+    form{
+        text-align: center;
+    }
+    fieldset{
+        width:780px;
+        margin: auto;
+        font-variant: small-caps;
+        border-style: groove;
+        
+        -webkit-border-radius: 8px/7px; 
+        -moz-border-radius: 8px/7px; 
+        border-radius: 8px/7px; 
+        -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+        -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+        box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+        border-color: #fdfdfd;
+        padding:15px;	
+    }
+    .legend{
+        margin-left:200px;
+    }
+    .abb{
+        margin-top: 20PX; 
+
+    }
+    .abbtitle{
+        margin-left:200px;
+    }
+    .pagamento{
+        margin-top: 20PX; 
+        
+
+    }
+    .paytitle{
+        margin-left:200px;
+    }
+
+    .indirizzo{
+        margin-top: 20PX; 
+        
+
+    }
+    .fattitle{
+        margin-left:200px;
+    }
+
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn{
+    font-variant: small-caps;
+    border-style: groove;
+    color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    box-shadow:3cm;
+}
+
+</style>
+<header><img src="https://www.associazionedifesaconsumatori.it/wp-content/uploads/2015/05/Ultracom-tyoenaeytteet_logo.jpg" width="300px" class="center"></header>
+<body>
+ 
+<form action="#" method="get" class="form">
+    <fieldset>
+        <legend class="legend"> <b>REGISTRATION FORM</b> </legend><div class="form">
+    <br><label for="name"><b>Nome:</b></label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="lname"><b>Cognome</b>:</label>
+    <input type="text" id="lname" lname="lname" required><br><br>
+
+    <div><label for="age"><b>Età</b>:</label>
+    <input type="number" id="age" name="age" min="18" max="100" required>
+    <label><b>Data di nascita</b>:
+    <input type="date" name="dateofbirth" min="1940-01-01" max="2005-12-31"></label>
+    <br><br>
+    <label for="tel"><b>Numero di cellulare:</b></label>
+    <input type="tel" id="number" id="number" maxlength="13" required><br>
+    
+    </div>
+
+    <br><br>
+    <div>
+    <label for="email"><b>E-mail:</b></label>
+    <input type="email" id="email" email="email" required>
+    
+    <label for="password"><b>Password:</b></label>
+    <input type="password" id="password" password="password" required><br><br>
+    </div>
+    <div>
+    <label for="gender"><b>Genere:</b></label>
+    <input type="radio" id="gender" name="gender" gender="gender_op1">
+    <label for="female">Donna</label>
+    <input type="radio" id="gender" name="gender" gender="gender_op2">
+    <label for="male">Uomo</label>
+    <input type="radio" id="gender" name="gender" gender="gender_op3" checked="checked">
+    <label for="other">Non definito</label><br><br>
+    <label for="termini">Se clicchi accetti termini e condizioni.</label>
+    <input type="checkbox"  value="html" checked="checked" id="termini" termini="termini" required><br><br>
+    </div>
+    
+    
+</fieldset>
+
+<div class="abbonamento">
+    <fieldset class="abb">
+        <legend class="abbtitle"><b>SELEZIONA UN PIANO</b></legend>
+        <input type="radio" id="abbonamento" name="abbonamento" abbonamento="free" checked="checked">
+        <label for="free">Free</label>
+        <input type="radio" id="abbonamento" name="abbonamento" abbonamento="Piano Mensile">
+        <label for="free">Piano Mensile 15€</label>
+        <input type="radio" id="abbonamento" name="abbonamento" abbonamento="Piano Annuale">
+        <label for="free">Piano Annuale 50€</label><br>
+        <input type="checkbox" id="pro" name="pro" pro="Pro">
+        <label for="pro">Vuoi abilitare vantaggi <b>PRO</b>? Costo aggiuntivo di 10€.</label>
+    </fieldset>
+</div>
+
+<div class="pagamento">
+    <fieldset class="pay">
+        <img src="https://4.bp.blogspot.com/-A5h84piMoPU/W3P62cdodzI/AAAAAAAACsM/UdQYPgU_JiI2wsFSLjR7KZJE_bPIZVg_wCLcBGAs/s640/Cards.jpg" width="400px"><br><br>
+        <legend class="paytitle"><b>METODO DI PAGAMENTO</b></legend>
+        <label for="creditcard"><b>Inserisci numero carta di credito:</b></label><br>
+        <input type="ccn" id="creditcard" creditcard="creditcard" required><br><br>
+        <label for="cvc"><b>CVC:</b></label><br>
+        <input type="ccn" id="cvc" cvc="cvc" pattern="\d{3}" maxlength="3" required><br><br>
+        <label for="expiry"><b>Scadenza:</b></label><br>
+        <input maxlength='5' id="expiry" placeholder="MM/YY" type="text" onkeyup="formatString(event);">
+        
+    
+</div></fieldset>
+
+<div class="indirizzo">
+    <fieldset class="indfatt">
+        <legend class="fattitle"><b>INDIRIZZO DI FATTURAZIONE:</b></legend>
+        <label for="indirizzo"><b>Indirizzo:</b></label>
+        <input type="text" id="indirizzo" indirizzo="indirizzo" required>
+        <label for="civico"><b>Numero Civico:</b></label>
+        <input type="text" id="number" number="number" size="3" ><br><br>
+        <label for="citta"><b>Città:</b></label>
+        <input type="text" id="citta" citta="citta" required>
+        <label for="provincia"><b>Provincia:</b></label>
+        <input type="text" id="provincia" provincia="provincia" size="2" required><br><br>
+        <label for="cap"><b>CAP:</b></label>
+        <input type="text" id="cap" cap="cap" size="2" maxlength="5" required><br><br>
+
+        <button class="btn" type="submit">Invia</button><br>
+    </fieldset>
+</div>
+    
+</div></div>
+    
+    </form>
+</body>
